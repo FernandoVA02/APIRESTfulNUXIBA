@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Dev\\PruebaTec\\testdevbackjr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\entities\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,15 +50,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\README.md",
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAiwLEAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAiwBUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-05-25T23:23:13.712Z"
+              "WhenOpened": "2025-05-25T23:23:13.712Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -86,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",

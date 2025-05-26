@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EVALUACIÓN TÉCNICA NUXIBA
 
 Prueba: **DESARROLLADOR JR**
@@ -99,8 +98,8 @@ Trabaja en SQL Server y realiza las siguientes consultas basadas en la tabla `cc
    Ejemplo de respuesta:  
    - `User_id`: 92  
    - Tiempo total: 361 días, 12 horas, 51 minutos, 8 segundos
-	
-   '''sql
+
+```sql
 --Consulta del usuario que mas tiempo ha estado logueado
 WITH TiempoSegundos AS (
     SELECT Top 1
@@ -121,7 +120,7 @@ SELECT
     CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) % 60 AS VARCHAR) + ' segundos'
     AS TiempoFormateado
 FROM TiempoSegundos;
-'''
+```
 
 2. **Consulta del usuario que menos tiempo ha estado logueado** (10 puntos):
    - Escribe una consulta similar a la anterior, pero que devuelva el usuario que ha pasado menos tiempo logueado.
@@ -130,7 +129,7 @@ FROM TiempoSegundos;
    - `User_id`: 90  
    - Tiempo total: 244 días, 43 minutos, 15 segundos
 
-   '''sql
+```sql
 --Consulta del usuario que menos tiempo ha estado logueado
 WITH TiempoSegundos AS (
     SELECT Top 1
@@ -151,7 +150,7 @@ SELECT
     CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) % 60 AS VARCHAR) + ' segundos'
     AS TiempoFormateado
 FROM TiempoSegundos;
-'''
+```
 
 3. **Promedio de logueo por mes** (10 puntos):
    - Escribe una consulta que calcule el tiempo promedio de logueo por usuario en cada mes.
@@ -159,6 +158,50 @@ FROM TiempoSegundos;
    Ejemplo de respuesta:  
    - Usuario 70 en enero 2023: 3 días, 14 horas, 1 minuto, 16 segundos
 
+```sql
+--Promedio de logueo por mes
+WITH Movimientos AS (
+    SELECT 
+        User_Id,
+        fecha,
+        TipoMov,
+        FORMAT(fecha, 'yyyy-MM') AS Periodo,
+        ROW_NUMBER() OVER (PARTITION BY User_Id, FORMAT(fecha, 'yyyy-MM'), TipoMov ORDER BY fecha) AS rn
+    FROM ccloglogin
+),
+LogueosEmparejados AS (
+    SELECT 
+        login.User_Id,
+        login.Periodo,
+        login.fecha AS FechaLogin,
+        logout.fecha AS FechaLogout,
+        DATEDIFF(SECOND, login.fecha, logout.fecha) AS DuracionSegundos
+    FROM Movimientos login
+    INNER JOIN Movimientos logout
+        ON login.User_Id = logout.User_Id
+        AND login.Periodo = logout.Periodo
+        AND login.rn = logout.rn
+        AND login.TipoMov = 1 AND logout.TipoMov = 0
+    WHERE logout.fecha > login.fecha
+),
+Promedios AS (
+    SELECT 
+        User_Id,
+        Periodo,
+        AVG(DuracionSegundos * 1.0) AS PromedioSegundos
+    FROM LogueosEmparejados
+    GROUP BY User_Id, Periodo
+)
+SELECT 
+    User_Id,
+    Periodo,
+    FORMAT(PromedioSegundos / 86400.0, 'N2') + ' días, ' +
+    FORMAT((PromedioSegundos % 86400) / 3600.0, 'N2') + ' horas, ' +
+    FORMAT((PromedioSegundos % 3600) / 60.0, 'N2') + ' minutos, ' +
+    FORMAT(PromedioSegundos % 60.0, 'N2') + ' segundos' AS TiempoPromedio
+FROM Promedios
+ORDER BY User_Id, Periodo;
+```
 ---
 
 ## Ejercicio 3: API RESTful para generación de CSV (30 puntos)
@@ -193,6 +236,48 @@ FROM TiempoSegundos;
 ---
 
 Este examen evalúa tu capacidad para desarrollar APIs RESTful, realizar consultas avanzadas en SQL Server y generar reportes en formato CSV. Se valorará la organización del código, las mejores prácticas y cualquier documentación adicional que proporciones.
-=======
-# APIRESTfulNUXIBA
->>>>>>> a7a634d864908b99960ca07cca7fa4bfe2464029
+
+---
+## 📄 Generar Reporte CSV de Horas Trabajadas
+
+Este endpoint genera un archivo CSV que contiene la lista de usuarios junto con el total de horas trabajadas, calculadas a partir de sus registros de login/logout.
+
+### Probar con Postman
+
+#### Método y URL
+`GET http://localhost:{puerto}/generarCSV`
+
+> Reemplaza `{puerto}` con el número de puerto que usa tu aplicación (por ejemplo: `5000`, `7090`, etc.).
+
+#### Headers
+No se requieren headers especiales. Asegúrate de que el servidor esté en ejecución.
+
+#### Ejemplo de uso
+
+1. Abre Postman.
+2. Crea una nueva solicitud (`New > HTTP Request`).
+3. Selecciona el método `GET`.
+4. Ingresa la URL del endpoint:
+`http://localhost:5000/generarCSV`
+5. Haz clic en **Send**.
+6. La respuesta será un archivo `.csv`. En Postman, selecciona la pestaña **Body** > **Save to file** para descargarlo.
+
+---
+
+### Contenido del CSV
+
+El archivo contiene las siguientes columnas:
+
+```csv
+Login,Nombre Completo,Área,Total Horas Trabajadas
+cechavezAgent,cechavezAgent cechavezAgent cechavezAgent,Default,7958.19
+charlesAgent,charlesAgent charlesAgent charlesAgent,Default,8349.55
+```
+###Detalles Técnicos
+Se suman las horas entre pares consecutivos de `Login (TipoMov = 1)` y `Logout (TipoMov = 0)`.
+
+El nombre completo se genera concatenando `Nombre`, `ApellidoPaterno` y `ApellidoMaterno`.
+
+Si el usuario no tiene área asignada, se muestra `"Sin área"`.
+
+El resultado se devuelve como un archivo `reporte_horas_trabajadas.csv` con tipo MIME `text/csv`.
