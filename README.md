@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EVALUACIÓN TÉCNICA NUXIBA
 
 Prueba: **DESARROLLADOR JR**
@@ -192,3 +193,6 @@ FROM TiempoSegundos;
 ---
 
 Este examen evalúa tu capacidad para desarrollar APIs RESTful, realizar consultas avanzadas en SQL Server y generar reportes en formato CSV. Se valorará la organización del código, las mejores prácticas y cualquier documentación adicional que proporciones.
+=======
+# APIRESTfulNUXIBA
+>>>>>>> a7a634d864908b99960ca07cca7fa4bfe2464029
