@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dev\\PruebaTec\\testdevbackjr\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\entities\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:entities\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|c:\\dev\\pruebatec\\testdevbackjr\\migrations\\20250525224101_primera migracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5E121D9-B36E-4BD7-A357-5203A2B985AE}|APIRESTfulNUXIBA.csproj|solutionrelative:migrations\\20250525224101_primera migracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAiwLEAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-05-25T23:23:13.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250525224101_Primera Migracion.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Migrations\\20250525224101_Primera Migracion.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250525224101_Primera Migracion.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Migrations\\20250525224101_Primera Migracion.cs",
+              "RelativeToolTip": "Migrations\\20250525224101_Primera Migracion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T22:41:01.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:17:12.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAuwN0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T20:04:31.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Context\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Context\\AppDBContext.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Context\\AppDBContext.cs",
+              "RelativeToolTip": "Context\\AppDBContext.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAiwGwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:46:12.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Area.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\Area.cs",
+              "RelativeDocumentMoniker": "Entities\\Area.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\Area.cs",
+              "RelativeToolTip": "Entities\\Area.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:36:01.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:35:41.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\Login.cs",
+              "RelativeDocumentMoniker": "Entities\\Login.cs",
+              "ToolTip": "C:\\Dev\\PruebaTec\\testdevbackjr\\Entities\\Login.cs",
+              "RelativeToolTip": "Entities\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:34:21.53Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

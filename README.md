@@ -4,7 +4,7 @@ Prueba: **DESARROLLADOR JR**
 
 Deadline: **1 día**
 
-Nombre: 
+Nombre: Fernando Ventura Aleman
 
 ---
 
@@ -35,7 +35,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Passw0rd'    -p 1433:14
 
 6. Conéctate al servidor de SQL con cualquier herramienta como **SQL Server Management Studio** o **Azure Data Studio** utilizando las siguientes credenciales:
    - **Servidor**: localhost, puerto 1433
-   - **Usuario**: sa
+   - **Usuario**: SA
    - **Contraseña**: YourStrong!Passw0rd
 
 ---
@@ -98,6 +98,29 @@ Trabaja en SQL Server y realiza las siguientes consultas basadas en la tabla `cc
    Ejemplo de respuesta:  
    - `User_id`: 92  
    - Tiempo total: 361 días, 12 horas, 51 minutos, 8 segundos
+	
+   '''sql
+--Consulta del usuario que mas tiempo ha estado logueado
+WITH TiempoSegundos AS (
+    SELECT Top 1
+        User_Id,
+        ISNULL(SUM(CASE WHEN TipoMov = 1 THEN CAST(DATEDIFF(SECOND, '2000-01-01', fecha) AS BIGINT) END), 0) -
+        ISNULL(SUM(CASE WHEN TipoMov = 0 THEN CAST(DATEDIFF(SECOND, '2000-01-01', fecha) AS BIGINT) END), 0) AS TotalSegundos
+    FROM ccloglogin
+    GROUP BY User_Id
+	Order by TotalSegundos DESC
+)
+SELECT
+    User_Id,
+    CAST(TotalSegundos / 31536000 AS VARCHAR) + ' años, ' +
+    CAST((TotalSegundos % 31536000) / 2592000 AS VARCHAR) + ' meses, ' +
+    CAST(((TotalSegundos % 31536000) % 2592000) / 86400 AS VARCHAR) + ' días, ' +
+    CAST((((TotalSegundos % 31536000) % 2592000) % 86400) / 3600 AS VARCHAR) + ' horas, ' +
+    CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) / 60 AS VARCHAR) + ' minutos, ' +
+    CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) % 60 AS VARCHAR) + ' segundos'
+    AS TiempoFormateado
+FROM TiempoSegundos;
+'''
 
 2. **Consulta del usuario que menos tiempo ha estado logueado** (10 puntos):
    - Escribe una consulta similar a la anterior, pero que devuelva el usuario que ha pasado menos tiempo logueado.
@@ -105,6 +128,29 @@ Trabaja en SQL Server y realiza las siguientes consultas basadas en la tabla `cc
    Ejemplo de respuesta:  
    - `User_id`: 90  
    - Tiempo total: 244 días, 43 minutos, 15 segundos
+
+   '''sql
+--Consulta del usuario que menos tiempo ha estado logueado
+WITH TiempoSegundos AS (
+    SELECT Top 1
+        User_Id,
+        ISNULL(SUM(CASE WHEN TipoMov = 1 THEN CAST(DATEDIFF(SECOND, '2000-01-01', fecha) AS BIGINT) END), 0) -
+        ISNULL(SUM(CASE WHEN TipoMov = 0 THEN CAST(DATEDIFF(SECOND, '2000-01-01', fecha) AS BIGINT) END), 0) AS TotalSegundos
+    FROM ccloglogin
+    GROUP BY User_Id
+	Order by TotalSegundos ASC
+)
+SELECT
+    User_Id,
+    CAST(TotalSegundos / 31536000 AS VARCHAR) + ' años, ' +
+    CAST((TotalSegundos % 31536000) / 2592000 AS VARCHAR) + ' meses, ' +
+    CAST(((TotalSegundos % 31536000) % 2592000) / 86400 AS VARCHAR) + ' días, ' +
+    CAST((((TotalSegundos % 31536000) % 2592000) % 86400) / 3600 AS VARCHAR) + ' horas, ' +
+    CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) / 60 AS VARCHAR) + ' minutos, ' +
+    CAST(((((TotalSegundos % 31536000) % 2592000) % 86400) % 3600) % 60 AS VARCHAR) + ' segundos'
+    AS TiempoFormateado
+FROM TiempoSegundos;
+'''
 
 3. **Promedio de logueo por mes** (10 puntos):
    - Escribe una consulta que calcule el tiempo promedio de logueo por usuario en cada mes.

@@ -1,0 +1,6 @@
+@APIRESTfulNUXIBA_HostAddress = http://localhost:5099
+
+GET {{APIRESTfulNUXIBA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
